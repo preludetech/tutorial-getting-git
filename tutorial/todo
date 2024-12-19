@@ -1,0 +1,15 @@
+- what is Git for 
+- understanding the graph structure and some basic terminology 
+- why we are using the command line, and why we need to understand bash 
+- install Git 
+- getting comfortable in the terminal (Gitbash or similar)
+- let's make a repo 
+    make a README 
+    git init 
+    git add 
+    staging area 
+    git log 
+    git push and pull with Github
+    git clone 
+    
+- 
