@@ -1,15 +1,24 @@
-- what is Git for 
-- understanding the graph structure and some basic terminology 
-- why we are using the command line, and why we need to understand bash 
-- install Git 
-- getting comfortable in the terminal (Gitbash or similar)
-- let's make a repo 
+[x] what is Git for 
+[ ] understanding the graph structure and some basic terminology 
+[ ] why we are using the command line, and why we need to understand bash 
+[ ] install Git 
+[ ] getting comfortable in the terminal (Gitbash or similar)
+[ ] let's make a repo (follow git basic exercises)
+    where to put it. Make a new directory 
     make a README 
     git init 
     git add 
     staging area 
     git log 
-    git push and pull with Github
-    git clone 
-    
+[ ] Put it on Github 
+    - push 
+    - pull
+    - clone 
+    - looking at commits and insights 
+
+[ ] Recap: critical commands  
+
+[ ] Github pages: make a simple website and host it
+[ ] Now make a PR on someone else's website 
 - 
+

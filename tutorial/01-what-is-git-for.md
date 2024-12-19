@@ -32,7 +32,7 @@ Git doesn’t just save your work; it lets multiple people contribute to a proje
 
 Git isn’t just about the what — it also captures the why. Each change can be documented with a message, creating a story of your project’s evolution. It’s like a built-in diary for your code.
 
-## Conclusion
+## Conclusion 
 
 Learning Git may feel intimidating at first, but it’s one of the most valuable skills you can add to your developer toolkit. It turns chaos into clarity, fear into confidence, and solo struggles into seamless teamwork. Whether you’re working on a personal project or collaborating with a global team, Git is the secret ingredient to writing better code — and keeping your sanity intact.
 
