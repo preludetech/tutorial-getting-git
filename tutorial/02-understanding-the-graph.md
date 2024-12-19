@@ -10,7 +10,7 @@ Here is an example:
 
 ![](images/graph1.drawio.svg)
 
-<img src="/images/graph1.drawio.svg" style="background-color:white">
+<img src="images/graph1.drawio.svg" style="background-color:white">
 
 You can think of all sorts of different things as graphs. 
 
