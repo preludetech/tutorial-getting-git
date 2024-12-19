@@ -10,6 +10,8 @@ Here is an example:
 
 ![](images/graph1.drawio.svg)
 
+<img src="/images/graph1.drawio.svg" style="background-color:white">
+
 You can think of all sorts of different things as graphs. 
 
 - The internet is a graph: There are many web pages (nodes) that link to each other (edges)
