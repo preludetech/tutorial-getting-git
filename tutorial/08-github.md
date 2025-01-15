@@ -3,9 +3,9 @@
 So far, we've seen how you can use Git on your local computer so that you can:
 
 - keep track of changes to your project over time
-- name different versions of your project
-- switch to different versions of your project by using the checkout command
-- see what changes were made at different points in time 
+- use commit messages to describe different versions of your project
+- switch to different versions of your project by using the `checkout` command
+- see what changes were made at different points in time.
 
 This is powerful already! But Git can do a whole lot more!
 
@@ -13,7 +13,7 @@ This is powerful already! But Git can do a whole lot more!
 
 The next thing we are going to cover is: How to keep a backup of your work online. Backing your stuff up is useful for a few reasons:
 
-1. If your work is online, team-mates can access it
+1. If your work is online, your team-mates can access it
 2. If you have multiple copies of your work then if your computer crashes you'll be alright 
 3. You can access your own work from different places. You wont always need your computer with you in order to work 
 
@@ -56,7 +56,7 @@ Now you will see a pretty big form to fill out:
 
 ![](images/github-new-repo-form.png)
 
-Fill in a "repository name". This can be "Personal website" or "Getting git website" or similar.
+Fill in a "repository name". This can be "Personal website" or "Getting Git website" or similar.
 
 Leave all the other form fields as they are for now. The default values are good!
 
@@ -68,13 +68,13 @@ You should now see a page that looks like this:
 
 ## Configure your local repo
 
-Now, you'll need to set up your local repo (your website from the last section) so that it knows about the repo you created on Github. Then you will be able to back your code up and save it to Github.
+Now, you'll need to set up your local repo (your your local personal_website repo from the last section) so that it knows about the repo you created on Github. Then you will be able to back your code up and save it to Github.
 
 The Github page you are looking at will have a section with the heading: "Quick setup — if you’ve done this kind of thing before". There will be an "HTTPS" button and an "SSH" button. Select "HTTPS". 
 
 When you click on "HTTPS" you'll see that all the git addresses mentioned in the page get updated. Instead of things saying `git@github.com:YOUR_USERNAME/YOUR_REPO_NAME.git`, you'll see something more like `https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git`.
 
-Feel free to switch/toggle between the HTTPS and SSH a few times to see the difference.
+Feel free to switch/toggle between the HTTPS and SSH options a few times to see the difference.
 
 ![](./images/repo-created-select-https.png)
 
@@ -96,7 +96,7 @@ Then paste in the 3 commands that Github gave you. Paste one in at a time.
 
 When you try to execute the `git push` command, you will be asked to authenticate with your Github username and password. 
 
-Once all the commands have been executed successfully, move forward.
+Once all the commands have been executed successfully, move forward. But if you get any errors you can't solve, please ask for help!
 
 ## Exploring Github
 
@@ -117,9 +117,9 @@ Here are a few challenges for you. Try to figure out how to do these by navigati
 - If you click on the latest commit message (in the screenshot, it is "Personalised index page") then what happens? Can you make sense of what you see? Can you navigate to the commit's parent?
 - Can you navigate to a page that shows a list of all the commits?
 
-## Github pages: Free website hosting! 
+## Github Pages: Free website hosting! 
 
-One really cool thing about Github is that it allows you to host simple websites for free.
+One really cool thing about Github is that it allows you to host simple websites for free!
 
 Navigate to your repo then click on the settings tab. Then, on the left hand side, click on "Pages"
 
@@ -140,6 +140,8 @@ Here, you will see a workflow that is busy running. You can click on it to see t
 Once the workflow has finished running then you will be able to see a url in the `deploy` box. If you click on it then it will take you to your live website! 
 
 Your website url will be something like this `https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/`. 
+
+You can share that URL with whoever you want and they'll be able to see it!
 
 ## Make a change to your `index.html` file 
 
@@ -171,6 +173,8 @@ Finally, do a `git push`.
 
 Now you can go and look at your Github Actions again. You'll see that there is a workflow running. Once it is finished running then your latest changes will be live!
 
+Take a look at your website and make sure.
+
 ## Optional Side Quest: Github Profile Personalisation
 
 Github allows all sorts of personalisation. You can upload a profile picture, add social media links to your account, and change your profile page so that it says what you want it to say. 
@@ -186,6 +190,9 @@ Remember earlier on when you were configuring your local Git repo, there was an 
 That was necessary because we had not yet set up a SSH key.
 
 While SSH isn't critical for this tutorial, SSH is helpful and secure. It takes a few steps to set it up, and it might take a bit of effort to understand.
+
+
+If you use Git and Github professionally, then you are very likely to need to use an SSH key. 
 
 ### What is SSH for?
 
