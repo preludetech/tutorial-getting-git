@@ -20,6 +20,8 @@ You can think of all sorts of different things as graphs:
 
 Some graphs are directed and some are undirected. If you were to draw the relationships in your family tree then you could use arrows to make sure that all the parent/child relationships are shown in the same way. 
 
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/IjfSA3kMQP0/0.jpg)](https://www.youtube.com/watch?v=IjfSA3kMQP0)
+
 ## Back to Git 
 
 To understand how Git works, it’s helpful to think of your project history as a graph — a network of connected points. 

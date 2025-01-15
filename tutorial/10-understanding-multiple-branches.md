@@ -10,7 +10,7 @@ We spoke about making a few commits on a project. We ended up with a graph that 
 
 ![](images/commit_graph_website_3.drawio.svg)
 
-So far our graph looks pretty boring, there are 3 nodes (commits) in a straight-line. Things get interesting (and very useful) when we introduce branches. 
+So far our graph looks pretty boring, there are 3 nodes (commits) in a straight-line. Things get interesting (and very useful) when we introduce more branches. 
 
 Earlier, we spoke about how every commit (except the first one) has a parent. 
 
@@ -30,7 +30,7 @@ Remember how each commit keeps track of the changes made since the previous comm
 
 Well, if we checkout `feature_1` then that would be like taking an empty directory and then applying the changes from the following commits in order: 1, 2, 4, 6, 7.
 
-In other words, the `feature_1` branch is not aware of the changes in commits 3, 5, 8 or 9.
+In other words, the `feature_1` branch is **NOT** aware of the changes in commits 3, 5, 8 or 9.
 
 Similarly, if you were to `git checkout main` then the files and directories you see would be due to commits 1, 2, 3 and 5. 
 
@@ -42,11 +42,11 @@ Alice is tasked with adding a search feature so users can quickly find recipes. 
 
 Each of the developers can create a new branch for their personal tasks. 
 
-Alice creates a branch called feature/search. She can focus on her search feature without worrying about what Bob or Charlie are doing. If her changes break something, it’s contained in her branch. It doesn't effect anyone else's code.
+Alice creates a branch called `feature/search`. She can focus on her search feature without worrying about what Bob or Charlie are doing. If her changes break something, it’s contained in her branch. It doesn't effect anyone else's code.
 
-Bob creates a branch called feature/photo-upload. He’s free to experiment with file handling and image storage without affecting anyone else’s work.
+Bob creates a branch called `feature/photo-upload`. He’s free to experiment with file handling and image storage without affecting anyone else’s work.
 
-Charlie creates a branch called bugfix/empty-ingredient-crash. He can fix the bug independently, ensuring his updates don’t disrupt Alice or Bob.
+Charlie creates a branch called `bugfix/empty-ingredient-crash`. He can fix the bug independently, ensuring his updates don’t disrupt Alice or Bob.
 
 In this situation it is clear that branches have some benefits:
 
@@ -60,7 +60,7 @@ In this situation it is clear that branches have some benefits:
 
 Now, let's say Bob is able to complete his feature's code while the other two developers are still working. 
 
-Git and Github have tools that allow the team to review Bob's work and merge it into the main branch. His work wont be merged into the main branch until the team have agreed that it is good enough. This way, the main branch can be kept clean and working.
+Git and Github have tools that allow the team to review Bob's work and **merge** it into the main branch. His work wont be **merged** into the main branch until the team have agreed that it is good enough. This way, the main branch can be kept clean and working.
 
 ## Merging 
 
