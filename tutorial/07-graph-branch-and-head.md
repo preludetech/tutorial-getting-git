@@ -79,7 +79,15 @@ nothing to commit, working tree clean
 
 If you are not sure what these mean, play around with your local repo a bit - edit files, create commits, use the log and checkout different versions of your code. Try to get an idea of when the different messages come up.
 
+## Video 
 
+[Here](https://www.youtube.com/watch?v=XmZ41lr2PVg) is a video that explains the concepts above.
 
+And [here](https://www.youtube.com/watch?v=bp2Vy-szSfU) is a video that only focuses on the detached HEAD state.
 
+## Practice and Play 
 
+Make sure you make the time to explore these concepts. Try making some changes to some of the files in your repo, make some commits, `checkout` different things. 
+
+- Do you know how to detach the HEAD?
+- Do you know where the `master` branch will be if you make a commit? What if you are in a `detached HEAD` state?

@@ -15,7 +15,11 @@ Learn to ask good questions! It's a super-power!
 
 For the rest of this workshop, you will be using Git to track changes on a project. You'll be making a very simple personal website. You'll even host it on the web! 
 
-Don't worry, you don't need to know anything about web development to follow along. We'll be keeping the web stuff really basic and showing you what to do at every step of the way.
+Don't worry, you don't need to know anything about web development to follow along. We'll be keeping the web stuff really basic and showing you what to do every step of the way.
+
+## Video 
+
+If you are struggling to follow along with the instructions here, [this video](https://www.youtube.com/watch?v=7TprabACC6Q) shows you exactly what to do.
 
 ## Stay organised!
 

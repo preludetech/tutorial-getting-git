@@ -20,7 +20,9 @@ You can think of all sorts of different things as graphs:
 
 Some graphs are directed and some are undirected. If you were to draw the relationships in your family tree then you could use arrows to make sure that all the parent/child relationships are shown in the same way. 
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/IjfSA3kMQP0/0.jpg)](https://www.youtube.com/watch?v=IjfSA3kMQP0)
+## Video 
+
+[Here](https://www.youtube.com/watch?v=IjfSA3kMQP0) is a video explaining how graphs work. This video explains a few different types of graphs, and has some examples not in the text.
 
 ## Back to Git 
 
@@ -76,6 +78,10 @@ So if you wanted to see what your original `README` file looked like before your
 This is done with the `checkout` command. We'll see this in action later.
 
 If you think of each commit as a snapshot of the entire code base at a point in time then you can use the `checkout` command to load that snapshot. It's a bit like time travel.
+
+## Video 
+
+You can see the git commit graph explained in a video [here](https://www.youtube.com/watch?v=d1qovsLTUcY)
 
 ## Version control for the win!
 

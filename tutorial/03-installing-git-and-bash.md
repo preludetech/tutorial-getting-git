@@ -39,3 +39,5 @@ Pay close attention: put in your own email address and name, don't use the place
 git config --global user.email "your@email.whatevs"
 git config --global user.name "your name"
 ```
+
+If these commands are confusing, [here](https://youtu.be/K8gYtLpQTVg) is a short video that should help.
