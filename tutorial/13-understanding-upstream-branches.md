@@ -57,7 +57,7 @@ You can also type in `git branch -a -vv` - this will give you an idea of which r
 
 ## Pushing specific branches 
 
-Git is a **distributed** version control system. The basic idea is that every copy of the repo will get a copy of every commit. You do have to choose when to push (upload) and pull (download) the different commits. It doesn't happen automatically, you are in control!
+Git is a **distributed** version control system. The basic idea is that every copy of the repo will get a copy of every commit. But, you do have to choose when to `push` (upload) and `pull` (download) the different commits. It doesn't happen automatically, you are in control!
 
 Let's say you checkout your contact feature branch and then push it:
 
@@ -69,3 +69,23 @@ git push
 This will upload all the commits that are in the history of the `feature/contact_page` branch. It will push the `HEAD` commit and all it's ancestors (its parent, the parent's parent, etc).
 
 It will not automatically push the commits that are on your portfolio or main branch. It will only update the `upstream`.
+
+## Challenge 
+
+Make some changes to your website.
+
+Create 2 new branches that implement different changes. Here are some examples of things you could do:
+
+- list your skills
+- link to an actual portfolio project 
+- create a page that displays your CV 
+
+Keep it simple for now :) You can make it awesome later.
+
+Create 2 separate branches and commit some code to each of them.
+
+Push one branch to Github and then explore `git branch -a -vv` and the Github website to make sure you can see what got pushed and what didn't. 
+
+Keep adding commits and pushing changes, keep experimenting, until you are comfortable understanding what got pushed.
+
+When you are comfortable, you can merge your changes into your `main` branch, fix any conflicts that came up, and `push` your latest stuff to Github. 
