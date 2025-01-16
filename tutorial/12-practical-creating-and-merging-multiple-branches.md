@@ -1,10 +1,10 @@
 # Creating and merging multiple branches
 
-In this section we will be creating and merging multiple branches. We'll also be dealing with our first ever merge conflict.
+In this section we will be creating and merging multiple branches. We'll also be dealing with our first ever **merge conflict!**
 
-## What are we going to do?  
+## Our branches
 
-In this section, we'll be creating multiple features on our website. Each of those features will get a branch of its own:
+We'll be creating multiple features on our website. Each of those features will get a branch of its own:
 
 ### Feature 1: Add link to contact page to home page
 
@@ -32,6 +32,20 @@ But it is very common for different developers to be working on different featur
 
 Of course these developers would be working on their own separate computers, with their own copies of the code. We'll talk more about this type of collaboration later!
 
+### A note on branch names
+
+We are giving our branches funny names like `feature/...`. This is a common thing for developers to do. It gives a little bit more info about what the branch is for.
+
+Naming conventions save lives! 
+
+Here are some examples of how people sometimes name their branches:
+
+- `feat/...` or `feature/...` for new functionality
+- `fix/...` or `bugfix/...` for fixing bugs 
+- `docs/...` for documentation 
+
+It is very useful to be explicit on things and **build good habits** even when you are working on your own personal projects!
+
 ## Let's implement our contact page link 
 
 Checkout your `contact_link` feature branch:
@@ -51,11 +65,13 @@ Now edit your `index.html` page so that it has a link to your contact page. Here
 </head>
 
 <body>
+
     <nav>
         <ul>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+
     <h1>Website</h1>
     <p>This website is being created as part of a <a href="https://prelude.tech">Prelude</a> Getting Git workshop.</p>
 </body>
@@ -74,7 +90,9 @@ git add .
 git commit -m "Added contact page link to home page"
 ```
 
-Take a moment to go look at Github. Is everything as it should be?  Remember, you  have not pushed these changes yet.
+**Don't push your code just yet!**
+
+Take a moment to go look at Github. Is everything as it should be?  
 
 ## Let's implement the portfolio page feature 
 
@@ -133,16 +151,19 @@ Commit your changes:
 git add .
 git commit -m "added portfolio page"
 ```
-
 ## Can you see the contradictions?
 
-You'll notice that the contact link is not included in this page. The change exists in a different branch.  You should be able to see that the two branches have changes that contradict each other. 
+You'll notice that the contact link is not included in your `index.html` page in your current branch. You should be able to see that the two branches have changes that contradict each other. 
 
 This kind of thing happens a lot.
 
 Imagine that there are multiple developers involved in this project and they are not communicating with each other - one developer would add the link to the `contact.html` page without knowing that there would also be a link to the portfolio page. And the person working on the portfolio page would add a link to `portfolio.html` without knowing about the contact page.  
 
-This is a simle scenario, but code is often a lot more complicated than this! So it's important to learn about how Git allows you to deal with contradictions like this.
+This is a simle scenario, but code is often a lot more complicated than this! 
+
+Often, multiple developers will need to write complicated features, and edit the same files. Sometimes no amount of good communication can prevent merge conflicts. Merge conflicts are a fact of life and it's important to get comfortable with resolving those conflicts!
+
+So it's important to learn about how Git allows you to deal with contradictions like this.
 
 ## Challenge - upstream branches
 
@@ -151,6 +172,8 @@ Can you figure out how to push your new branches to Github? Can you explore them
 - How does `git checkout` come into play?
 - How about `git push`? Does it just work? Or do you need to do something special?
 
+Make sure you push both your new branches: `feature/contact_link` AND `feature/portfolio_page`
+
 When you try to `git push` a new branch then you will get an error message. Git is quite helpful - it will tell you what command to use to push your code. You will be told to set an **upstream** branch for each of your branches. 
 
 If you want to push or pull a branch of commits to/from a remote repository, then you need to say which branch of the remote repository you want to interact with. 
@@ -158,6 +181,19 @@ If you want to push or pull a branch of commits to/from a remote repository, the
 Git does not assume that you will always be using the same remote repo (remember that you can create multiple if you want to). And Git does not assume that your local branches will always have the same names as your remote branches.  Git gives you control over these things, so you need to be explicit about what you want to to.
 
 If you tell your local repo that the upstream for your local `feature/portfolio_page` is the `feature/portfolio_page` branch on your `origin` remote, then your repo will know that whenever you `git push` you will want to upload your commits to that specific place. 
+
+## A branch knows 3 things 
+
+Remember earlier we said that a branch is a data structure and it only knows 2 things:
+
+- Every branch has a name
+- A branch can point to zero or one commits 
+
+Branches keep track of one more piece of information: A branch can have an `upstream` branch.  
+
+If you checkout a branch and then say `git push` then you push your commits to the upstream. And if you `git pull` then you will pull commits from the upstream. 
+
+You can configure the upstream to behave differently (eg: `push` to one upstream, and `pull` from a different one) but you usually dont need to do that kind of thing.
 
 ## Time to merge 
 
@@ -169,13 +205,15 @@ Since we want to get all the changes into the `main` branch, we start off by che
 git checkout main
 ```
 
+Do you know what the HEAD is pointing at? Use `git log` to check yourself.
+
 Now let's merge the first branch:
 
 ```
 git merge feature/contact_link
 ```
 
-Take a moment to think about the commit graph. What do you think is happening here? Can you visualise it in your mind? Do you think there are new commits? Where is the head?
+Take a moment to think about the commit graph. What do you think is happening here? Can you visualise it in your mind? Do you think there are new commits? Where is the `HEAD`?
 
 Take a look around your repo. Does everything look like you would expect?
 
@@ -236,7 +274,6 @@ Merge conflicts happen quite often in serious projects. So it is a good idea to 
 
 ## How Git displays merge conflicts
 
-
 When there is a merge-conflict then Git will update the problem files and add text like this:
 
 ```
@@ -247,11 +284,15 @@ When there is a merge-conflict then Git will update the problem files and add te
 >>>>>>> feature/portfolio_pa
 ```
 
-`HEAD` refers to the branch/commit you are on now. Since the "contact link" feature was already merged, that is what we are seeing.
+`<<<<<<< HEAD` refers to the branch/commit you are on now. Since the "contact link" feature was already merged into the main branch, we see those changes in the `<<<<<<< HEAD` section.
 
 The second section, under the `=======`, shows the changes that are coming in from the branch you are trying to merge.
 
-Take a bit of time to look at your index.html file. Do all the lines text make sense to you? Can you see what Git is trying to tell you?
+Take a bit of time to look at your `index.html` file. Do all the lines text make sense to you? Can you see what Git is trying to tell you?
+
+Take the time you need to understand it, and ask questions if you need to! 
+
+Remember that merge conflicts are a fact of life. On big complicated projects, there can be a lot of conflicts and they can be a lot weirder than this one.  It's really worth understanding.
 
 ## Fixing the conflict
 
@@ -260,11 +301,13 @@ Your job, as a developer, is to get the code into a state where:
 - the code is valid. Eg: If you are writing HTML then the code should be valid HTML, if you are writing Python then there shouldn't be weird syntax errors etc.
 - the code should do the correct thing: This means you need to look at both the changes and decide how to deal with them. If different branches implemented different features then all the features should work correctly
 
-Do not blindly accept changes without reading them. You could overwrite someone else's hard work. 
+Do not blindly accept changes without reading them! You could be effecting someone else's hard work.  
 
-You need to look at the changes and think to yourself: How should this code look? What is it meant to do? 
+You need to look at the changes and think to yourself:  **What is this code supposed to do? **
 
-Then you need to fix the code.
+In our case, we need the `<nav>` section of the website to contain both the links.
+
+Once you know what the code should do, you need to fix the code.
 
 In this case, the `index.html` file should look something like:
 
@@ -290,7 +333,7 @@ In this case, the `index.html` file should look something like:
 </html>
 ```
 
-Update the `index.html` file and save your changed. Then commit them and push your work to Github.
+Update the `index.html` file and save your changes. Then commit them and push your work to Github.
 
 ```
 git add .
