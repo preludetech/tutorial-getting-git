@@ -191,7 +191,6 @@ That was necessary because we had not yet set up a SSH key.
 
 While SSH isn't critical for this tutorial, SSH is helpful and secure. It takes a few steps to set it up, and it might take a bit of effort to understand.
 
-
 If you use Git and Github professionally, then you are very likely to need to use an SSH key. 
 
 ### What is SSH for?

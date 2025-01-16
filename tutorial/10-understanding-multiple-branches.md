@@ -14,9 +14,11 @@ So far our graph looks pretty boring, there are 3 nodes (commits) in a straight-
 
 Earlier, we spoke about how every commit (except the first one) has a parent. 
 
-Now, it's important to understand that multiple commits can have the same parent. So you could create a graph that looks like this:
+Now, it's important to understand that **multiple commits can have the same parent**. So you could create a graph that looks like this:
 
 ![](images/commit_graph_multiple_parents.drawio.svg) 
+
+In this case, commits 3 and 4 both have 2 as a parent. 
 
 Remember how a branch is a pointer to a specific commit? In the diagram above we have 3 branches, each pointing to a different commit. 
 
@@ -33,6 +35,10 @@ Well, if we checkout `feature_1` then that would be like taking an empty directo
 In other words, the `feature_1` branch is **NOT** aware of the changes in commits 3, 5, 8 or 9.
 
 Similarly, if you were to `git checkout main` then the files and directories you see would be due to commits 1, 2, 3 and 5. 
+
+## Video 
+
+[Here](https://www.youtube.com/watch?v=lbrvSo1Rh6k) is a video that explains the above.
 
 ## Why is ths useful?
 
@@ -73,21 +79,17 @@ Here are a few things we already know about commits:
 
 A new thing to know is: A commit can have multiple parents. Like this:
 
-TODO: Pic 
+![](./images/commit_graph_multiple_parents_and_children.drawio.svg) 
 
 Merging is the act of combining the code changes from multiple branches. If you merge a feature branch into the main branch then that makes a new commit on the main branch.
 
 Let's say you are on the `main` branch, and you have a feature branch like this:
 
-TODO
-
-If you merge the feature branch into main then the graph will end up looking like this:
-
-TODO
-
 This is what happened:
 
 - a new commit was created 
-- the main branch was updated to point to the new commit 
+- the `main` branch was updated to point to the new commit 
 - the new commit has 2 parents
 - the feature branch remains unchanged 
+
+[Here](https://www.youtube.com/watch?v=EOv-wFKoFVo) is a video that explains this.
