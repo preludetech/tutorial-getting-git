@@ -5,10 +5,11 @@ So far we have spoken a lot about ways to back up your code:
 - you can set up a remote for your local repository
 - you can push your commits to the remote 
 
-In this section we'll talk about how you can
+In this section we'll talk about how you can:
 
-- download an entire repo 
-- download the latest commits on a branch 
+- download an entire repo (using `git clone ...`)
+- download the latest commits on a branch  (`git pull`)
+- download new branches, for example, if your team mate pushes a feature branch and you want to look at their code
 
 ## Clone 
 
@@ -52,11 +53,35 @@ Resolving deltas: 100% (14/14), done.
 
 You will now see that there is a new directory called `personal_website_copy`. Change into this directory using `cd personal_website_copy`.
 
-## Let's explore 
+## A note on the `git clone` command
+
+We use this form of the command:
+
+```
+git clone THE_URL_YOU_COPIED_FROM_GITHUB NAME_OF_LOCAL_DIRECTORY
+```
+
+We can also use the `git clone`  command without saying where we want to store our local repo, like this:
+
+```
+git clone THE_URL_YOU_COPIED_FROM_GITHUB
+```
+
+In this case Git would create a directory for us, and it would give it a sensible name. 
+
+For example, this command will create a directory called `getting_git_website`
+
+```
+git clone git@github.com:sheenarbw/getting-git-website.git
+```
+
+Try typing in `git clone --help` to see how this is explained in the docs.
+
+## Let's explore the clone
 
 Take a look around for yourself:
 
-- What files and folders can you see in this directory? Try typing `ls`
+- What files and folders can you see in this new directory? Try `cd` into the directory, then use `ls`, and `ls -a`
 - What do you think will happen if you type in `git status`? Try it and see 
 
 Now, type in `git branch`. How many branches do you see? This should be a bit surprising. You'll only see one branch! 
@@ -65,9 +90,11 @@ Now try `git branch -a`. You should be able to see all your remote branches.
 
 ## Let's commit some changes
 
-Let's update our README file:
+For this section, we'll be working with your `personal_website_copy` repo. Let's update our `README.md` file:
 
-First, make a new branch and check it out
+**IMPORTANT**: Double check that your terminal is in the right place, use `pwd`. And make sure you are editing the correct files in the correct directory! Always be sure of where you are!
+
+Make a new branch and check it out
 
 ```
 git checkout -b feature/readme
@@ -80,7 +107,7 @@ git branch feature/readme
 git checkout feature/readme
 ```
 
-Now make a change to your README file. Update it so it looks like this:
+Now make a change to your `README.md` file. Update it so it looks like this:
 
 ```
 # Personal website 
@@ -90,11 +117,11 @@ This website is being created as part of a [Prelude](https://prelude.tech/) Gett
 You can see the live version of this website [here](PUT_YOUR_WEBSITE_URL_HERE)
 ```
 
-Now commit your changes and push them to Github. You can make sure that everything pushed correctly by using the `git branch -a -vv` command or by using the Github website.
+Now `commit` your changes and `push` them to Github. You can make sure that everything pushed correctly by using the `git branch -a -vv` command or by using the Github website.
 
 ## Go back to your original local repo 
 
-At this point you should have two copied of your repo, and these will be in different directories:
+At this point you should have two copies of your repo, and these will be in different directories:
 
 - `personal_website`: This is our original local repo. This is where we did all the contact and portfolio feature page work
 - `personal_website_copy`: We created this with our `git clone` command and we just added a new branch and commit here. 
@@ -102,7 +129,7 @@ At this point you should have two copied of your repo, and these will be in diff
 Now, `cd` into your original `personal_website` directory: 
 
 ```
-cd ../personal_website_copy
+cd ../personal_website
 ```
 
 What do you think will happen if you type in the following commands? 
