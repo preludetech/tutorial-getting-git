@@ -2,10 +2,11 @@
 
 In [the last section](./12-multiple-branches.md) you were given the challenge of pushing your new branches to Github.
 
-
 ## Exploring branches
 
-Earlier, we used the command `git branch` to see what branches were available. Here are a few more things you can do:
+Earlier, we used the command `git branch` to see what branches were available. 
+
+Here are a few more things you can do with the `git branch` command:
 
 Try this out:
 
@@ -17,7 +18,11 @@ This will output something like this:
 
 ```
 * main
+  feature/contact_page
+  feature/portfolio
   remotes/origin/main
+  remotes/origin/feature/contact_page
+  remotes/origin/feature/portfolio
 ```
 
 This command will list your local branches as well as your remote branches. For more detail on how this works, try type in `git branch --help`.
@@ -30,13 +35,15 @@ git branch -v
 
 Can you understand what you see there? 
 
+Can you see the commit hashes and messages?
+
 Now try this one:
 
 ```
 git branch -vv
 ```
 
-This command will give you a bunch of information. Here wyou will be able to see if your local branches have upstream branches, and where those upstreams are.
+This command will give you a bunch of information. Here you will be able to see if your local branches have upstream branches, and where those upstreams are.
 
 Eg:
 
