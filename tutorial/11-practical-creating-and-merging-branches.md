@@ -21,6 +21,8 @@ Now type in `git branch` to see what branches you have. The output should look s
 * main
 ```
 
+What do you think the little `*` next to `main` tells us?
+
 The little `*` next to `main` tells us that you are still on the `main` branch.
 
 If you type in `git log` then your latest commit will look something like this:
@@ -33,11 +35,13 @@ Date:   Sat Jan 4 09:56:49 2025 +0200
     Personalised index page
 ```
 
-This tells us that both the branches, `main` and `feature/contact_page` are pointing to the same commit, and that `HEAD` is pointing to `main`.
+This tells us that both the branches, `main` and `feature/contact_page` are pointing to the same commit, and that `HEAD` is pointing to `main`. So we are on the `main` branch.
 
 Now do this: `git checkout feature/contact_page`.
 
-What do you think the output of `git branch` will look like now? And how about `git log`? And `git status`? Think about it, then check if you got it right.
+What do you think the output of `git branch` will look like now? And how about `git log`? And `git status`? 
+
+Think about it, then check if you got it right.
 
 Now, create a new file in your project: `contact.html`.
 
@@ -59,12 +63,9 @@ Write this inside the file:
 </html>
 ```
 
-Now commit your changes and leave a sensible commit message. 
+Now commit your changes and leave a sensible commit message, for example, "added contact page"
 
-```
-git add . 
-git commit -m "added contact page"
-```
+## Git log
 
 Take a look at your `git log` again. 
 
@@ -92,9 +93,9 @@ Use this command to push your code:
 git push --set-upstream origin feature/contact_page
 ```
 
-Now make another change to your contact.html file. For example you might want to add your social media handles.
+Now make another change to your `contact.html` file. For example you might want to add your social media handles.
 
-Eg:
+My page might look like this:
 
 ```
 <!DOCTYPE html>
@@ -115,11 +116,12 @@ Eg:
     </ul>
 </body>
 
-
 </html>
 ```
 
-And commit and push your changes:
+Commit and push your changes. 
+
+Try think of how to do it before looking at the code below :) 
 
 ```
 git add .
@@ -127,7 +129,7 @@ git commit -m "added social media handles"
 git push
 ```
 
-This time, `git push` just worked!
+This time, `git push` just worked! We didn't need to do any fancy `--set-upstream origin` stuff. We'll explore why a little later.
 
 ## Explore Github 
 
@@ -141,7 +143,7 @@ Github will show you a message that says your branch was pushed recently.
 
 ![](images/github_branch_pushed.png)
 
-You will also be able to click on the dropdown menu (currently it says `main`) in order to switch between branches
+You will also be able to click on the dropdown menu (currently it says `main`) in order to switch between branches.
 
 ![](images/github_branch_select.png)
 
@@ -162,7 +164,7 @@ Lastly, click on the `Insights` tab and then click on `Network`. This will give 
 Try hover over each of the commits in the graph. What happens?
 What happens if you click on one of them?
 
-## Now, back to your computer
+## Now, back to your local repo
 
 Take a look at your `git log` and `git status`. Take note of what you see there. Is it what you expect?
 
@@ -176,10 +178,16 @@ Check your `git log` and `git status` again. What do you notice? What is the dif
 
 You can switch between the branches as many times as you need to!
 
+## Merge time!
+
+Now checkout your main branch and merge your feature branch. 
+
 ```
+git checkout main
 git merge feature/contact_page
-git push
 ```
+
+Push your code to Github once again.
 
 Go and explore Github again. Is everything as you would expect? Is anything surprising?
 
@@ -187,4 +195,4 @@ Go and explore Github again. Is everything as you would expect? Is anything surp
 
 You have made one branch and you have merged it. That's a good start! 
 
-In the next section, we'll be dealing with multiple branches.
+In the next section, we'll be dealing with more branches.
