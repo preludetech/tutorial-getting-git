@@ -40,4 +40,4 @@ git config --global user.email "your@email.whatevs"
 git config --global user.name "your name"
 ```
 
-If these commands are confusing, [here](https://youtu.be/K8gYtLpQTVg) is a short video that should help.
+If these commands are confusing, [here](https://www.youtube.com/watch?v=a5Ae3FLewDI) is a short video that should help.

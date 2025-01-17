@@ -19,7 +19,11 @@ Don't worry, you don't need to know anything about web development to follow alo
 
 ## Video 
 
-If you are struggling to follow along with the instructions here, [this video](https://www.youtube.com/watch?v=7TprabACC6Q) shows you exactly what to do.
+If you are struggling to follow along with the instructions here, [this video](https://www.youtube.com/watch?v=N9XmEnP6aF0) will help.
+
+Make sure you read this document even if you watch the video!
+
+And make sure you actually do the work. Type in the commands and play with this stuff! You cannot master a skill by watching someone talk.
 
 ## Stay organised!
 

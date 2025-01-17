@@ -83,7 +83,7 @@ If you are not sure what these mean, play around with your local repo a bit - ed
 
 [Here](https://www.youtube.com/watch?v=XmZ41lr2PVg) is a video that explains the concepts above.
 
-And [here](https://www.youtube.com/watch?v=bp2Vy-szSfU) is a video that only focuses on the detached HEAD state.
+And [here](https://www.youtube.com/watch?v=L8Mhq0CXGLE) is a video that only focuses on the detached HEAD state.
 
 ## Practice and Play 
 

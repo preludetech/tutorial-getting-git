@@ -31,7 +31,7 @@ Bash is a very big topic, it's a whole language! We wont cover all of it, just t
 
 ### Video 
 
-[Here](https://youtu.be/mejTu06pnPI) is a video that explains the main concepts and commands we'll be using.  
+[Here](https://www.youtube.com/watch?v=prjBzXRIAd0) is a video that explains the main concepts and commands we'll be using.  
 
 Now, it's very important that you put effort into practising bash a bit. Don't just watch the video and then move on - read through the rest of this chapter and test these commands out on your own computer. 
 
