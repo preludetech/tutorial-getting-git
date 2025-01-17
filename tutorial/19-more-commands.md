@@ -12,7 +12,7 @@ Read [this](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase
 
 ## Git stash 
 
-Sometimes you get into a situation where you are not quite ready to commit your code, but you need to switch branches and work on something else. This is where git stash comes in.
+Sometimes you get into a situation where you are not quite ready to commit your code, but you need to switch branches and work on something else. This is where `git stash` comes in.
 
 Read [this](https://www.atlassian.com/git/tutorials/saving-changes/git-stash) for a good explanation.
 
