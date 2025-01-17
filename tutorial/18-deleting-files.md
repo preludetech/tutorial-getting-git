@@ -4,7 +4,7 @@ If you delete a file by mistake, then you can use Git to recover it. Try this ou
 
 1. Create a new file called `delete_this.md` and put some random text inside it. 
 2. Save the file
-3. Commit the file to the repo 
+3. Commit the file to the repo
 
 ```
 git add .
@@ -27,7 +27,7 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-6. Again, commit your changes:
+6. Again, commit your changes and push:
 
 ```
 git add .
@@ -86,3 +86,6 @@ If you are working with a public repo hosted on Github then this mistake will br
 
 As a rule: **NEVER EVER COMMIT SECRETS** unless you are fine with people having access to those secrets. 
 
+## Video 
+
+[Here](https://www.youtube.com/watch?v=bNCRjMIyJyA) is a video that demonstrates the above. It also explains the security implications.
