@@ -187,3 +187,26 @@ Here are a few things to explore while you do this:
 
 You should have the `git` command-line skills to try all these things out! 
 
+## Optional Side Quest: Learn about feature branching 
+
+Git branches are pretty powerful things. They are very flexible.  This flexibility can lead to a lot of chaos in a team project, so it is important for team members to decide on how they will use them.
+
+Team members need to decide on things like:
+
+- Are there any "special" branches, eg `main`, `develop`, etc
+- When are new branches created? Are there any rules about which branches one can `branch` off?
+- When are branches merged? Are there any rules about what branches can be merged into what? 
+
+There are a lot of decisions to make! Imagine a team of 10 developers on a large project. It would be utter chaos if every developer had their own way of managing and thinking about branches.
+
+It's really important to have a standard branching practice. This is called a **Branching Strategy** or a **Branching Workflow**
+
+Because this a universal need, there are a few standard branching strategies that have become common practice. 
+
+[Here](https://www.atlassian.com/git/tutorials/comparing-workflows) is a nice article on branching strategies. 
+
+It's very much worth understanding the [Feature Branch Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow) at this point. This is because the mechanisms and mindsets used by Feature Branching come up in many of the heavier strategies. 
+
+I'd recommend trying to follow this workflow in your personal and small-team projects until you get used to it. You'll learn about the subtleties as you practice!
+
+It's also important to know that different strategies have different pros and cons. Some projects deserve a simple strategy and some require something more complex. It would be good to get an idea of how these things work so that you can make good decisions in the future.
