@@ -1,0 +1,3 @@
+- Add mechanism for submitting work
+- Go over output from commands, is it all accurate? Can I get someone else to do this for me? 
+
