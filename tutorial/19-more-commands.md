@@ -2,13 +2,19 @@
 
 We have covered a lot of ground! In this section we are going to touch on a few other commands you will likely come across in your developer journey. We wont go into these in great detail in this workshop. 
 
-Please take some time to read these docs. You should have all the tools you need to understand these:
+We will be relying on Atlassian's excellent documentation to understant these concepts. 
+
+Please take some time to read these docs. You should have all the tools you need to understand these.
+
+When there are worked examples, including code or commands, please read them line by line. Make sure you understand each and every line! And remember to ask questions if you get stuck!
 
 ## Git rebase 
 
 Rebase rewrites history. It is often used instead of `git merge`.
 
 Read [this](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase) for a good explanation.
+
+It's useful to know about Rebase becuse it is used very often. With rebase you can make sure your commit history is linear and this makes it easier to understand and navigate. 
 
 ## Git stash 
 
@@ -29,3 +35,5 @@ Learn more [here](https://www.atlassian.com/git/tutorials/inspecting-a-repositor
 Sometimes you will want to unstage a file, undo a commit, remove an ignored file or similar. 
 
 Read [this](https://www.atlassian.com/git/tutorials/undoing-changes) to get an idea of some of what you can do.
+
+Pay special attention to the `git reset` command, it is commonly used and commonly confused with `checkout`.
