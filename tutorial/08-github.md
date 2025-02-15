@@ -42,6 +42,7 @@ Github is free to use. If you haven't signed up yet, do it now:
 1. Use a personal email address if you can. If you sign up with a school or work email address then you might not have access to that address in 5 years.
 2. Choose a username you will be happy with for a long time. You can use your own name, a social-media handle, or something awesome. You can change it later, but that can be inconvenient for a lot of reasons
 
+
 ## Make a repo on Github
 
 Once you are logged in, go to your profile page. The url will be like this: https://github.com/YOUR_USERNAME_HERE  (please use your own username in the url!) 
@@ -94,7 +95,69 @@ You can do this by checking out master: `git checkout master`. You might have al
 
 Then paste in the 3 commands that Github gave you. Paste one in at a time.
 
-When you try to execute the `git push` command, you will be asked to authenticate with your Github username and password. 
+When you try to execute the `git push` command, you might be asked to authenticate with your Github username and password. If you enter your password you'll get an error message :/ 
+
+It will say:
+
+```
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/sheenarbw/second-brain.git/'
+```
+
+## Authentication 
+
+Github works hard to keep your code safe. And, as nice as passswords are, entering your password at the command line every time you push your code is not the most secure thing to do. It's also quite inconvenient. 
+
+There are a lot of different ways to authenticate with Github. You can use SSH (in which case you will need to set up an SSH key), or you can use a Personal Access Token (which requires quite a lot of set up as well).
+
+Another thing you can do is use the github command line utility. We'll do that now:
+
+First install the command line utility on your local computer by following the instructions [here](https://github.com/cli/cli#installation)
+
+Once it is installed, execute the command:
+
+```
+gh auth login
+```
+
+You will be asked a few questions. Answer the questions like this:
+
+```
+? Where do you use GitHub? GitHub.com
+? What is your preferred protocol for Git operations on this host? HTTPS
+? Authenticate Git with your GitHub credentials? Yes
+? How would you like to authenticate GitHub CLI? Login with a web browser
+```
+
+Then you will see a message like this:
+
+```
+! First copy your one-time code: ????-????
+Press Enter to open https://github.com/login/device in your browser... 
+```
+
+Press enter and paste the code into your browser. 
+
+Now your terminal should say something like this:
+
+```
+✓ Authentication complete.
+- gh config set -h github.com git_protocol https
+✓ Configured git protocol
+✓ Logged in as YOUR_USERNAME
+```
+
+
+## Try pushing again
+
+Now, in your repo, try execute your git push command again:
+
+```
+git push -u origin main
+```
+
+Now it will push correctly!
 
 Once all the commands have been executed successfully, move forward. But if you get any errors you can't solve, please ask for help!
 
