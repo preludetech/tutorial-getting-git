@@ -148,7 +148,6 @@ Now your terminal should say something like this:
 ✓ Logged in as YOUR_USERNAME
 ```
 
-
 ## Try pushing again
 
 Now, in your repo, try execute your git push command again:
@@ -168,6 +167,8 @@ Now, in your web browser, go look at your repo on Github. The url will be someth
 You should now see something like this:
 
 ![](images/git-pushed.png)
+
+Note that you can see the `index.html` file immediately. It should not be inside a directory, it should be in the root of your repo.
 
 Time to explore!
 
@@ -245,60 +246,3 @@ Github allows all sorts of personalisation. You can upload a profile picture, ad
 Head over to your profile page, and see what you can edit.
 
 You might find this useful along the way: [Basic writing and formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax). This will be useful if you want to update the text that shows up on your profile page.
-
-## Optional Side Quest: Configure your SSH key 
-
-Remember earlier on when you were configuring your local Git repo, there was an option to use SSH or HTTPS. You clicked on the HTTPS button.
-
-That was necessary because we had not yet set up a SSH key.
-
-While SSH isn't critical for this tutorial, SSH is helpful and secure. It takes a few steps to set it up, and it might take a bit of effort to understand.
-
-If you use Git and Github professionally, then you are very likely to need to use an SSH key. 
-
-### What is SSH for?
-
-When you execute a `git push` command then your local Git program communicates with Github. It updates the code and the commits that Github stores.
-
-This needs to happen in a secure way - You need to be able to push your code to Github, but if someone random tried to push changes to your website then it shouldn't be allowed.
-
-So Github needs to know who is pushing.
-
-There are two ways to do this: HTTPS or SSH.
-
-We have been using HTTPS up until now. This means that every time we push to Github, we have to supply a username and password. This is repetitive, annoying, and easy to mess up.
-
-SSH allows us to use a different authentication method that is based on cryptographic key files. These are special files that contain very long and complicated strings of characters, you can think of them as special passwords for now.
-
-If you set yourself up so you can use SSH to push, then Git will use these key files automatically. You wont need to supply your username and password each time.
-
-### Setting up your SSH key
-
-We'll need to do a few things to set this up.
-
-1. Create SSH keys on your local computer (you'll create a public and a private key)
-2. Upload your SSH public key to Github
-3. Update your local repo so that it makes use of SSH instead of HTTPS 
-
-#### 1. Create SSH keys on your local computer
-
-To generate a new SSH key, you can follow [this guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=mac).
-
-Make sure you follow the instructions for the operating system you are running (Mac, Windows or Linux).
-
-#### 2. Upload your SSH public key to Github
-
-Follow [this guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#adding-a-new-ssh-key-to-your-account) to add your new SSH key to your Github account.
-
-Test that it is configured correctly by following [this guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection)
-
-#### 3. Update your local repo so that it makes use of SSH instead of HTTPS 
-
-Execute the following commands for your local Git repo:
-
-```
-git remote remove origin
-git remote add origin git@github.com:YOUR_USERNAME/YOUR_REPO_NAME.git
-```
-
-Now, the next time you `git push`, your local Git will authenticate automatically!
